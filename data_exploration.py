@@ -41,3 +41,11 @@ plt.show()
 %matplotlib inline
 housing_data.iloc[:,2:].hist(bins = 50, figsize = (20,10),cumulative=True, density = 1 )
 plt.show()
+
+#%% correlation between target and Other var
+housing_data.iloc[:,2:].corr()['median_house_value']
+
+# median_income has hightest corr and population has Neg corr
+
+#%% let check inter-correlation among var
+housing_data.iloc[:,2:].corr()
