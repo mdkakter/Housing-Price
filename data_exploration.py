@@ -31,3 +31,13 @@ housing_data.head()
 housing_data.info()
 # total_bedrooms has missing value
 housing_data.describe()
+housing_data.iloc[:,2:].describe()
+#%% plot Histogram of the data
+%matplotlib inline
+housing_data.iloc[:,2:].hist(bins = 50, figsize = (20,20))
+plt.show()
+
+#%% CDF
+%matplotlib inline
+housing_data.iloc[:,2:].hist(bins = 50, figsize = (20,10),cumulative=True, density = 1 )
+plt.show()
